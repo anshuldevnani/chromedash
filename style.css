@@ -1,0 +1,143 @@
+body
+{
+    margin:0;
+    padding: 0;
+    background: no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.grid-container 
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "widget1 searchengine widget2" "messages messages messages" "widget3 widget4 widget5";
+}
+
+.searchengine 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "searchbar searchbar searchbar" "quicklinks quicklinks quicklinks";
+    grid-area: searchengine;
+}
+
+.searchbar 
+{ 
+    grid-area: searchbar; 
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background: transparent;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-txt
+{
+    grid-area: searchbox; 
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+.search-btn
+{
+    grid-area: searchbox; 
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 0;
+}
+
+.quicklinks 
+{ 
+    grid-area: quicklinks; 
+    justify-self: center;
+}
+.quicklink_button
+{
+    background: transparent;
+    border: 0; 
+    color: white;
+}
+
+.widget1 
+{ 
+    grid-area: widget1; 
+}
+
+.widget2 
+{ 
+    grid-area: widget2; 
+}
+
+.messages 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "greeting greeting greeting" "datetime datetime datetime" "datetime datetime datetime";
+    grid-area: messages;
+}
+
+.greeting 
+{ 
+    grid-area: greeting; 
+    justify-self: center;
+    font-size: 5vw;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.datetime 
+{ 
+    grid-area: datetime; 
+    justify-self: center;
+}
+
+#clock
+{
+    font-size: 9vw;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+}
+
+.date { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    color: white;
+    font-weight: bold;
+}
+
+.widget3 { grid-area: widget3; }
+
+.widget4 { grid-area: widget4; }
+
+.widget5 { grid-area: widget5; }

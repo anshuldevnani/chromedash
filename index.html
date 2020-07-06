@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0a9cf1a5ca.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</head>
+
+
+<body>
+    <div class="grid-container">
+        <div class="searchengine">
+            <div class="searchbar">
+                <form onsubmit="performSearch()" autocomplete="off" id="searchfrm">
+                    <div onmouseover="expandSearchBar()" onmouseout="shrinkSearchBar()">
+                            <input type="text" id="search-txt" class="search-txt" name="q" placeholder="" autofocus="autofocus" oninput="searchBarExpand()">
+                            <button class="search-btn" id="search-btn" type="submit"><i class="fas fa-search fa-2x"></i></button>          
+                    </div>
+                </form>
+            </div>
+            <div class="quicklinks">
+                <button class=quicklink_button id=googlebutton onclick="window.open('https://www.google.com','_blank')"><i class="fab fa-google fa-3x"></i></button>
+                <button class=quicklink_button id="githubbutton" onclick="window.open('https://www.github.com','_blank')"><i class="fab fa-github fa-3x"></i></button>
+                <button class=quicklink_button id="youtubebutton" onclick="window.open('https://www.youtube.com','_blank')" ><i class="fab fa-youtube fa-3x"></i></button>
+                <button class="quicklink_button" id="redditbutton" onclick="window.open('https://reddit.com/', '_blank')"> <i class="fab fa-reddit fa-3x"></i> </button> 
+            </div> 
+        </div>
+
+
+        <div class="messages">
+            <div class="greeting" id="greeting"></div>
+            <div class="datetime">
+                <div class="date" id = "date"></div>
+                <div class="time" id = "clock"></div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+          
+
+
+</body></html>
