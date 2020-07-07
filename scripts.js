@@ -15,11 +15,11 @@ function generateGreeting()
     var amPM = (hour < 12) ? "AM" : "PM";
     hour = (hour > 12) ? hour - 12 : hour;
 
-    if( (hour >= 5 || hour <= 12) && amPM =="PM")
+    if( (hour >= 5) && amPM =="PM")
     {
         document.getElementById("greeting").innerText = "Good Evening Anshul";
     }
-    else if( (hour >= 12 || hour <= 5) && amPM =="PM")
+    else if( (hour >= 0 && hour < 5) && amPM =="PM")
     {
         document.getElementById("greeting").innerText = "Good Afternoon Anshul";
     }
